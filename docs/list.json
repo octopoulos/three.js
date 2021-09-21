@@ -157,7 +157,6 @@
 				"ShapeGeometry": 1,
 				"SphereGeometry": 1,
 				"TetrahedronGeometry": 1,
-				"TextGeometry": 1,
 				"TorusGeometry": 1,
 				"TorusKnotGeometry": 1,
 				"TubeGeometry": 1,
@@ -209,7 +208,6 @@
 				"CubeTextureLoader",
 				"DataTextureLoader",
 				"FileLoader",
-				"FontLoader",
 				"ImageBitmapLoader",
 				"ImageLoader",
 				"Loader",
@@ -354,7 +352,9 @@
 
 			"Geometries": [
 				"ConvexGeometry",
-				"DecalGeometry"
+				"DecalGeometry",
+				"ParametricGeometry",
+				"TextGeometry"
 			],
 
 			"Helpers": [
@@ -373,6 +373,7 @@
 				"3DMLoader",
 				"BasisTextureLoader",
 				"DRACOLoader",
+				"FontLoader",
 				"GLTFLoader",
 				"KTX2Loader",
 				"MMDLoader",
