@@ -1,0 +1,4272 @@
+{
+	"en": {
+		"Manual": {
+			"_sub": "manual/en/introduction",
+			"Getting Started": [
+				"Creating a scene",
+				"Installation",
+				"WebGL compatibility check",
+				"How to run things locally",
+				"Drawing lines",
+				"Creating text",
+				"Loading 3D models",
+				"Libraries and Plugins",
+				"FAQ",
+				"Useful links"
+			],
+			"Next Steps": [
+				"How to update things",
+				"How to dispose of objects",
+				"How to create VR content",
+				"How to use post-processing",
+				"Matrix transformations",
+				"Animation system"
+			],
+			"Build Tools": {
+				"Testing with NPM": "manual/en/buildTools/Testing-with-NPM"
+			}
+		},
+
+		"Reference": {
+			"_main": "api/en",
+			"Animation": {
+				"AnimationAction": {
+					"method": [
+						"crossFadeFrom",
+						"crossFadeTo",
+						"fadeIn",
+						"fadeOut",
+						"getEffectiveTimeScale",
+						"getEffectiveWeight",
+						"getClip",
+						"getMixer",
+						"getRoot",
+						"halt",
+						"isRunning",
+						"isScheduled",
+						"play",
+						"reset",
+						"setDuration",
+						"setEffectiveTimeScale",
+						"setEffectiveWeight",
+						"setLoop",
+						"startAt",
+						"stop",
+						"stopFading",
+						"stopWarping",
+						"syncWith",
+						"warp"
+					],
+					"property": [
+						"clampWhenFinished",
+						"enabled",
+						"loop",
+						"paused",
+						"repetitions",
+						"time",
+						"timeScale",
+						"weight",
+						"zeroSlopeAtEnd",
+						"zeroSlopeAtStart"
+					]
+				},
+
+				"AnimationClip": {
+					"url": [
+						"",
+						0,
+						[]
+					],
+					"method": [
+						"clone",
+						"optimize",
+						"resetDuration",
+						"toJSON",
+						"trim",
+						"validate",
+						"CreateClipsFromMorphTargetSequences",
+						"CreateFromMorphTargetSequence",
+						"findByName",
+						"parse",
+						"parseAnimation",
+						"toJSON"
+					],
+					"property": [
+						"duration",
+						"name",
+						"tracks",
+						"uuid"
+					]
+				},
+
+				"AnimationMixer": {
+					"method": [
+						"clipAction",
+						"existingAction",
+						"getRoot",
+						"stopAllAction",
+						"update",
+						"setTime",
+						"uncacheClip",
+						"uncacheRoot",
+						"uncacheAction"
+					],
+					"property": [
+						"time",
+						"timeScale"
+					]
+				},
+
+				"AnimationObjectGroup": {
+					"method": [
+						"add",
+						"remove",
+						"uncache"
+					],
+					"property": [
+						"stats",
+						"uuid"
+					]
+				},
+
+				"AnimationUtils": {
+					"method": [
+						"arraySlice",
+						"convertArray",
+						"flattenJSON",
+						"getKeyframeOrder",
+						"isTypedArray",
+						"makeClipAdditive",
+						"sortedArray",
+						"subclip"
+					]
+				},
+
+				"KeyframeTrack": {
+					"url": [
+						"",
+						[
+							0
+						]
+					],
+					"method": [
+						"clone",
+						"createInterpolant",
+						"getInterpolation",
+						"getValueSize",
+						"InterpolantFactoryMethodDiscrete",
+						"InterpolantFactoryMethodLinear",
+						"InterpolantFactoryMethodSmooth",
+						"optimize",
+						"scale",
+						"setInterpolation",
+						"shift",
+						"trim",
+						"validate",
+						"toJSON"
+					],
+					"property": [
+						"name",
+						"times",
+						"values",
+						"DefaultInterpolation",
+						"TimeBufferType ",
+						"ValueBufferType "
+					]
+				},
+
+				"PropertyBinding": {
+					"url": [
+						".Object3D",
+						"a.x"
+					],
+					"method": [
+						"getValue",
+						"setValue",
+						"bind",
+						"unbind",
+						"Composite",
+						"create",
+						"parseTrackName",
+						"findNode"
+					],
+					"property": [
+						"path",
+						"parsedPath",
+						"node",
+						"rootNode",
+						"BindingType",
+						"Versioning",
+						"GetterByBindingType",
+						"SetterByBindingTypeAndVersioning"
+					]
+				},
+
+				"PropertyMixer": {
+					"method": [
+						"accumulate",
+						"apply",
+						"saveOriginalState",
+						"restoreOriginalState"
+					],
+					"property": [
+						"binding",
+						"buffer",
+						"cumulativeWeight",
+						"valueSize",
+						"referenceCount",
+						"useCount"
+					]
+				}
+			},
+
+			"Animation / Tracks": {
+				"BooleanKeyframeTrack": {
+					"url": [
+						"",
+						[
+							0
+						]
+					],
+					"method": [
+						"InterpolantFactoryMethodLinear ",
+						"InterpolantFactoryMethodSmooth "
+					],
+					"property": [
+						"DefaultInterpolation",
+						"ValueBufferType",
+						"ValueTypeName"
+					]
+				},
+
+				"ColorKeyframeTrack": {
+					"url": [
+						"",
+						[
+							0
+						]
+					],
+					"property": [
+						"ValueTypeName"
+					]
+				},
+
+				"NumberKeyframeTrack": {
+					"url": [
+						"",
+						[
+							0
+						]
+					],
+					"property": [
+						"ValueTypeName"
+					]
+				},
+
+				"QuaternionKeyframeTrack": {
+					"url": [
+						"",
+						[
+							0
+						]
+					],
+					"method": [
+						"InterpolantFactoryMethodLinear"
+					],
+					"property": [
+						"DefaultInterpolation",
+						"ValueTypeName"
+					]
+				},
+
+				"StringKeyframeTrack": {
+					"url": [
+						"",
+						[
+							0
+						]
+					],
+					"method": [
+						"InterpolantFactoryMethodLinear",
+						"InterpolantFactoryMethodSmooth"
+					],
+					"property": [
+						"DefaultInterpolation",
+						"ValueBufferType",
+						"ValueTypeName"
+					]
+				},
+
+				"VectorKeyframeTrack": {
+					"url": [
+						"",
+						[
+							0
+						]
+					],
+					"property": [
+						"ValueTypeName"
+					]
+				}
+			},
+
+			"Audio": {
+				"Audio": {
+					"url": [
+						".AudioListener"
+					],
+					"method": [
+						"connect",
+						"disconnect",
+						"getFilter",
+						"getFilters",
+						"getLoop",
+						"getOutput",
+						"getPlaybackRate",
+						"getVolume",
+						"play",
+						"pause",
+						"onEnded",
+						"setBuffer",
+						"setFilter",
+						"setFilters",
+						"setLoop",
+						"setLoopStart",
+						"setLoopEnd",
+						"setMediaElementSource",
+						"setMediaStreamSource",
+						"setNodeSource",
+						"setPlaybackRate",
+						"setVolume",
+						"stop"
+					],
+					"property": [
+						"autoplay",
+						"context",
+						"detune",
+						"filters",
+						"gain",
+						"hasPlaybackControl",
+						"isPlaying",
+						"listener",
+						"playbackRate",
+						"offset",
+						"duration",
+						"source",
+						"sourceType",
+						"type"
+					]
+				},
+
+				"AudioAnalyser": {
+					"url": [
+						".Audio"
+					],
+					"method": [
+						"getFrequencyData",
+						"getAverageFrequency"
+					],
+					"property": [
+						"analyser",
+						"fftSize",
+						"data"
+					]
+				},
+
+				"AudioContext": {
+					"method": [
+						"getContext",
+						"setContext"
+					]
+				},
+
+				"AudioListener": {
+					"method": [
+						"getInput",
+						"removeFilter",
+						"getFilter",
+						"setFilter",
+						"getMasterVolume",
+						"setMasterVolume"
+					],
+					"property": [
+						"context",
+						"gain",
+						"filter",
+						"timeDelta"
+					]
+				},
+
+				"PositionalAudio": {
+					"url": [
+						".AudioListener"
+					],
+					"method": [
+						"getOutput",
+						"getRefDistance",
+						"setRefDistance",
+						"getRolloffFactor",
+						"setRolloffFactor",
+						"getDistanceModel",
+						"setDistanceModel",
+						"getMaxDistance",
+						"setMaxDistance",
+						"setDirectionalCone"
+					],
+					"property": [
+						"panner"
+					]
+				}
+			},
+
+			"Cameras": {
+				"ArrayCamera": {
+					"property": [
+						"cameras"
+					]
+				},
+
+				"Camera": {
+					"method": [
+						"clone",
+						"copy",
+						"getWorldDirection"
+					],
+					"property": [
+						"layers",
+						"matrixWorldInverse",
+						"projectionMatrix",
+						"projectionMatrixInverse"
+					]
+				},
+
+				"CubeCamera": {
+					"url": [
+						1,
+						1,
+						{}
+					],
+					"method": [
+						"update"
+					],
+					"property": [
+						"renderTarget"
+					]
+				},
+
+				"OrthographicCamera": {
+					"method": [
+						"setViewOffset",
+						"clearViewOffset",
+						"updateProjectionMatrix",
+						"toJSON"
+					],
+					"property": [
+						"bottom",
+						"far",
+						"left",
+						"near",
+						"right",
+						"top",
+						"view",
+						"zoom"
+					]
+				},
+
+				"PerspectiveCamera": {
+					"method": [
+						"clearViewOffset",
+						"getEffectiveFOV",
+						"getFilmHeight",
+						"getFilmWidth",
+						"getFocalLength",
+						"setFocalLength",
+						"setViewOffset",
+						"updateProjectionMatrix",
+						"toJSON"
+					],
+					"property": [
+						"aspect",
+						"far",
+						"filmGauge",
+						"filmOffset",
+						"focus",
+						"fov",
+						"near",
+						"view",
+						"zoom"
+					]
+				},
+
+				"StereoCamera": {
+					"method": [
+						"update"
+					],
+					"property": [
+						"aspect",
+						"eyeSep",
+						"cameraL",
+						"cameraR"
+					]
+				}
+			},
+
+			"Constants": [
+				"Animation",
+				"BufferAttributeUsage",
+				"Core",
+				"CustomBlendingEquations",
+				"Materials",
+				"Renderer",
+				"Textures"
+			],
+			"Core": {
+				"BufferAttribute": {
+					"url": [
+						".Uint32Array"
+					],
+					"method": [
+						"applyMatrix3",
+						"applyMatrix4",
+						"applyNormalMatrix",
+						"transformDirection",
+						"clone",
+						"copy",
+						"copyArray",
+						"copyAt",
+						"copyColorsArray",
+						"copyVector2sArray",
+						"copyVector3sArray",
+						"copyVector4sArray",
+						"getX",
+						"getY",
+						"getZ",
+						"getW",
+						"onUpload",
+						"set",
+						"setUsage",
+						"setX",
+						"setY",
+						"setZ",
+						"setW",
+						"setXY",
+						"setXYZ",
+						"setXYZW"
+					],
+					"property": [
+						"array",
+						"count",
+						"itemSize",
+						"name",
+						"needsUpdate",
+						"normalized",
+						"onUploadCallback",
+						"updateRange",
+						"usage",
+						"version"
+					]
+				},
+
+				"BufferGeometry": {
+					"method": [
+						"setAttribute",
+						"addGroup",
+						"applyMatrix4",
+						"applyQuaternion",
+						"center",
+						"clone",
+						"copy",
+						"clearGroups",
+						"computeBoundingBox",
+						"computeBoundingSphere",
+						"computeTangents",
+						"computeVertexNormals",
+						"dispose",
+						"getAttribute",
+						"getIndex",
+						"hasAttribute",
+						"lookAt",
+						"merge",
+						"normalizeNormals",
+						"deleteAttribute",
+						"rotateX",
+						"rotateY",
+						"rotateZ",
+						"scale",
+						"setIndex",
+						"setDrawRange",
+						"setFromPoints",
+						"toJSON",
+						"toNonIndexed",
+						"translate"
+					],
+					"property": [
+						"attributes",
+						"boundingBox",
+						"boundingSphere",
+						"drawRange",
+						"groups",
+						"drawcalls",
+						"id",
+						"index",
+						"morphAttributes",
+						"morphTargetsRelative",
+						"name",
+						"userData",
+						"uuid"
+					]
+				},
+
+				"Clock": {
+					"method": [
+						"start",
+						"stop",
+						"getElapsedTime",
+						"getDelta"
+					],
+					"property": [
+						"autoStart",
+						"startTime",
+						"oldTime",
+						"elapsedTime",
+						"running"
+					]
+				},
+
+				"EventDispatcher": {
+					"method": [
+						"addEventListener",
+						"hasEventListener",
+						"removeEventListener",
+						"dispatchEvent"
+					]
+				},
+
+				"GLBufferAttribute": {
+					"method": [
+						"setBuffer",
+						"setType",
+						"setItemSize",
+						"setCount"
+					],
+					"property": [
+						"buffer",
+						"count",
+						"itemSize",
+						"elementSize",
+						"type",
+						"isGLBufferAttribute",
+						"version",
+						"needsUpdate"
+					]
+				},
+
+				"InstancedBufferAttribute": {
+					"property": [
+						"meshPerAttribute"
+					]
+				},
+
+				"InstancedBufferGeometry": {
+					"method": [
+						"copy"
+					],
+					"property": [
+						"instanceCount"
+					]
+				},
+
+				"InstancedInterleavedBuffer": {
+					"property": [
+						"meshPerAttribute"
+					]
+				},
+
+				"InterleavedBuffer": {
+					"method": [
+						"copy",
+						"copyAt",
+						"set",
+						"clone",
+						"setUsage",
+						"toJSON"
+					],
+					"property": [
+						"array",
+						"stride",
+						"count",
+						"updateRange",
+						"updateRange.offset",
+						"updateRange.count",
+						"uuid",
+						"version",
+						"needsUpdate",
+						"usage"
+					]
+				},
+
+				"InterleavedBufferAttribute": {
+					"url": [
+						{}
+					],
+					"method": [
+						"applyMatrix4",
+						"applyNormalMatrix",
+						"transformDirection",
+						"getX",
+						"getY",
+						"getZ",
+						"getW",
+						"setX",
+						"setY",
+						"setZ",
+						"setW",
+						"setXY",
+						"setXYZ",
+						"setXYZW"
+					],
+					"property": [
+						"data",
+						"array",
+						"count",
+						"itemSize",
+						"name",
+						"needsUpdate",
+						"normalized",
+						"offset"
+					]
+				},
+
+				"Layers": {
+					"method": [
+						"disable",
+						"enable",
+						"set",
+						"test",
+						"toggle",
+						"enableAll",
+						"disableAll"
+					],
+					"property": [
+						"mask"
+					]
+				},
+
+				"Object3D": {
+					"method": [
+						"add",
+						"applyMatrix4",
+						"applyQuaternion",
+						"attach",
+						"clone",
+						"copy",
+						"getObjectById",
+						"getObjectByName",
+						"getObjectByProperty",
+						"getWorldPosition",
+						"getWorldQuaternion",
+						"getWorldScale",
+						"getWorldDirection",
+						"localToWorld",
+						"lookAt",
+						"lookAt",
+						"raycast",
+						"remove",
+						"removeFromParent",
+						"clear",
+						"rotateOnAxis",
+						"rotateOnWorldAxis",
+						"rotateX",
+						"rotateY",
+						"rotateZ",
+						"setRotationFromAxisAngle",
+						"setRotationFromEuler",
+						"setRotationFromMatrix",
+						"setRotationFromQuaternion",
+						"toJSON",
+						"translateOnAxis",
+						"translateX",
+						"translateY",
+						"translateZ",
+						"traverse",
+						"traverseVisible",
+						"traverseAncestors",
+						"updateMatrix",
+						"updateMatrixWorld",
+						"updateWorldMatrix",
+						"worldToLocal"
+					],
+					"property": [
+						"animations",
+						"castShadow",
+						"children",
+						"customDepthMaterial",
+						"customDistanceMaterial",
+						"frustumCulled",
+						"id",
+						"layers",
+						"matrix",
+						"matrixAutoUpdate",
+						"matrixWorld",
+						"matrixWorldNeedsUpdate",
+						"modelViewMatrix",
+						"name",
+						"normalMatrix",
+						"onAfterRender",
+						"onBeforeRender",
+						"parent",
+						"position",
+						"quaternion",
+						"receiveShadow",
+						"renderOrder",
+						"rotation",
+						"scale",
+						"up",
+						"userData",
+						"uuid",
+						"visible",
+						"DefaultUp",
+						"DefaultMatrixAutoUpdate"
+					]
+				},
+
+				"Raycaster": {
+					"method": [
+						"set",
+						"setFromCamera",
+						"intersectObject",
+						"intersectObjects"
+					],
+					"property": [
+						"far",
+						"near",
+						"camera",
+						"layers",
+						"params",
+						"ray"
+					]
+				},
+
+				"Uniform": {
+					"method": [
+						"clone"
+					],
+					"property": [
+						"value"
+					]
+				}
+			},
+
+			"Core / BufferAttributes": {
+				"BufferAttribute Types": "BufferAttributeTypes"
+			},
+
+			"Extras": {
+				"DataUtils": {
+					"method": [
+						"toHalfFloat"
+					]
+				},
+
+				"Earcut": {
+					"method": [
+						"triangulate"
+					]
+				},
+
+				"ImageUtils": {
+					"method": [
+						"getDataURL"
+					]
+				},
+
+				"PMREMGenerator": {
+					"url": [
+						".WebGLRenderer"
+					],
+					"method": [
+						"fromScene",
+						"fromEquirectangular",
+						"fromCubemap",
+						"compileCubemapShader",
+						"compileEquirectangularShader",
+						"dispose"
+					]
+				},
+
+				"ShapeUtils": {
+					"method": [
+						"area",
+						"isClockWise",
+						"triangulateShape"
+					]
+				}
+			},
+
+			"Extras / Core": {
+				"Curve": {
+					"method": [
+						"getPoint",
+						"getPointAt",
+						"getPoints",
+						"getSpacedPoints",
+						"getLength",
+						"getLengths",
+						"updateArcLengths",
+						"getUtoTmapping",
+						"getTangent",
+						"getTangentAt",
+						"computeFrenetFrames",
+						"clone",
+						"copy",
+						"toJSON",
+						"fromJSON"
+					],
+					"property": [
+						"arcLengthDivisions"
+					]
+				},
+
+				"CurvePath": {
+					"method": [
+						"add",
+						"closePath",
+						"getCurveLengths",
+						"getPoint",
+						"getPoints",
+						"getSpacedPoints"
+					],
+					"property": [
+						"curves",
+						"autoClose"
+					]
+				},
+
+				"Font": {
+					"method": [
+						"generateShapes"
+					],
+					"property": [
+						"data"
+					]
+				},
+
+				"Interpolations": {
+					"method": [
+						"CatmullRom",
+						"QuadraticBezier",
+						"CubicBezier"
+					]
+				},
+
+				"Path": {
+					"method": [
+						"absarc",
+						"absellipse",
+						"arc",
+						"bezierCurveTo",
+						"ellipse",
+						"lineTo",
+						"moveTo",
+						"quadraticCurveTo",
+						"setFromPoints",
+						"splineThru"
+					],
+					"property": [
+						"currentPoint"
+					]
+				},
+
+				"Shape": {
+					"method": [
+						"extractPoints",
+						"getPointsHoles"
+					],
+					"property": [
+						"uuid",
+						"holes"
+					]
+				},
+
+				"ShapePath": {
+					"method": [
+						"moveTo",
+						"lineTo",
+						"quadraticCurveTo",
+						"bezierCurveTo",
+						"splineThru",
+						"toShapes"
+					],
+					"property": [
+						"subPaths",
+						"currentPath",
+						"color"
+					]
+				}
+			},
+
+			"Extras / Curves": {
+				"ArcCurve": {},
+
+				"CatmullRomCurve3": {
+					"property": [
+						"points",
+						"closed",
+						"curveType",
+						"tension"
+					]
+				},
+
+				"CubicBezierCurve": {
+					"property": [
+						"v0",
+						"v1",
+						"v2",
+						"v3"
+					]
+				},
+
+				"CubicBezierCurve3": {
+					"property": [
+						"v0",
+						"v1",
+						"v2",
+						"v3"
+					]
+				},
+
+				"EllipseCurve": {
+					"property": [
+						"aX",
+						"aY",
+						"xRadius",
+						"yRadius",
+						"aStartAngle",
+						"aEndAngle",
+						"aClockwise",
+						"aRotation"
+					]
+				},
+
+				"LineCurve": {
+					"property": [
+						"v1",
+						"v2"
+					]
+				},
+
+				"LineCurve3": {
+					"property": [
+						"v1",
+						"v2"
+					]
+				},
+
+				"QuadraticBezierCurve": {
+					"property": [
+						"v0",
+						"v1",
+						"v2"
+					]
+				},
+
+				"QuadraticBezierCurve3": {
+					"property": [
+						"v0",
+						"v1",
+						"v2"
+					]
+				},
+
+				"SplineCurve": {
+					"property": [
+						"points"
+					]
+				}
+			},
+
+			"Extras / Objects": {
+				"ImmediateRenderObject": {
+					"method": [
+						"render"
+					],
+					"property": [
+						"material",
+						"hasPositions",
+						"hasNormals",
+						"hasColors",
+						"hasUvs",
+						"positionArray",
+						"normalArray",
+						"colorArray",
+						"uvArray",
+						"count"
+					]
+				}
+			},
+
+			"Geometries": {
+				"BoxGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"CircleGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"ConeGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"CylinderGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"DodecahedronGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"EdgesGeometry": {
+					"url": [
+						".Geometry"
+					],
+					"property": [
+						"parameters"
+					]
+				},
+
+				"ExtrudeGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"IcosahedronGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"LatheGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"OctahedronGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"ParametricGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"PlaneGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"PolyhedronGeometry": {
+					"url": [
+						[],
+						[]
+					],
+					"property": [
+						"parameters"
+					]
+				},
+
+				"RingGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"ShapeGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"SphereGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"TetrahedronGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"TextGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"TorusGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"TorusKnotGeometry": {
+					"property": [
+						"parameters"
+					]
+				},
+
+				"TubeGeometry": {
+					"property": [
+						"parameters",
+						"tangents",
+						"normals",
+						"binormals"
+					]
+				},
+
+				"WireframeGeometry": {
+					"url": [
+						".Geometry"
+					]
+				}
+			},
+
+			"Helpers": {
+				"ArrowHelper": {
+					"method": [
+						"setColor",
+						"setLength",
+						"setDirection"
+					],
+					"property": [
+						"line",
+						"cone"
+					]
+				},
+
+				"AxesHelper": {
+					"method": [
+						"setColors",
+						"dispose"
+					]
+				},
+
+				"BoxHelper": {
+					"method": [
+						"update",
+						"setFromObject"
+					]
+				},
+
+				"Box3Helper": {
+					"method": [
+						"updateMatrixWorld"
+					],
+					"property": [
+						"box"
+					]
+				},
+
+				"CameraHelper": {
+					"url": [
+						".Camera"
+					],
+					"method": [
+						"dispose",
+						"update"
+					],
+					"property": [
+						"camera",
+						"pointMap",
+						"matrix",
+						"matrixAutoUpdate"
+					]
+				},
+
+				"DirectionalLightHelper": {
+					"url": [
+						".DirectionalLight"
+					],
+					"method": [
+						"dispose",
+						"update"
+					],
+					"property": [
+						"lightPlane",
+						"light",
+						"matrix",
+						"matrixAutoUpdate",
+						"color"
+					]
+				},
+
+				"GridHelper": {},
+
+				"PolarGridHelper": {},
+
+				"HemisphereLightHelper": {
+					"url": [
+						".HemisphereLight"
+					],
+					"method": [
+						"dispose",
+						"update"
+					],
+					"property": [
+						"light",
+						"matrix",
+						"matrixAutoUpdate",
+						"color"
+					]
+				},
+
+				"PlaneHelper": {
+					"method": [
+						"updateMatrixWorld"
+					],
+					"property": [
+						"plane",
+						"size"
+					]
+				},
+
+				"PointLightHelper": {
+					"url": [
+						".PointLight"
+					],
+					"method": [
+						"dispose",
+						"update"
+					],
+					"property": [
+						"light",
+						"matrix",
+						"matrixAutoUpdate",
+						"color"
+					]
+				},
+
+				"SkeletonHelper": {
+					"url": [
+						".Object3D"
+					],
+					"property": [
+						"bones",
+						"root"
+					]
+				},
+
+				"SpotLightHelper": {
+					"url": [
+						".SpotLight"
+					],
+					"method": [
+						"dispose",
+						"update"
+					],
+					"property": [
+						"cone",
+						"light",
+						"matrix",
+						"matrixAutoUpdate",
+						"color"
+					]
+				}
+			},
+
+			"Lights": {
+				"AmbientLight": {},
+
+				"AmbientLightProbe": {},
+
+				"DirectionalLight": {
+					"method": [
+						"dispose",
+						"copy"
+					],
+					"property": [
+						"castShadow",
+						"position",
+						"shadow",
+						"target"
+					]
+				},
+
+				"HemisphereLight": {
+					"method": [
+						"copy"
+					],
+					"property": [
+						"color",
+						"groundColor",
+						"position"
+					]
+				},
+
+				"HemisphereLightProbe": {},
+
+				"Light": {
+					"method": [
+						"dispose",
+						"copy",
+						"toJSON"
+					],
+					"property": [
+						"color",
+						"intensity"
+					]
+				},
+
+				"LightProbe": {
+					"property": [
+						"sh"
+					]
+				},
+
+				"PointLight": {
+					"method": [
+						"dispose",
+						"copy"
+					],
+					"property": [
+						"decay",
+						"distance",
+						"intensity",
+						"power",
+						"shadow"
+					]
+				},
+
+				"RectAreaLight": {
+					"method": [
+						"copy"
+					],
+					"property": [
+						"intensity",
+						"power"
+					]
+				},
+
+				"SpotLight": {
+					"method": [
+						"dispose",
+						"copy"
+					],
+					"property": [
+						"angle",
+						"castShadow",
+						"decay",
+						"distance",
+						"intensity",
+						"penumbra",
+						"position",
+						"power",
+						"shadow",
+						"target"
+					]
+				}
+			},
+
+			"Lights / Shadows": {
+				"LightShadow": {
+					"method": [
+						"getFrameExtents",
+						"updateMatrices",
+						"getFrustum",
+						"getViewportCount",
+						"dispose",
+						"copy",
+						"clone",
+						"toJSON"
+					],
+					"property": [
+						"autoUpdate",
+						"camera",
+						"bias",
+						"blurSamples",
+						"map",
+						"mapPass",
+						"mapSize",
+						"matrix",
+						"needsUpdate",
+						"normalBias",
+						"radius"
+					]
+				},
+
+				"PointLightShadow": {
+					"method": [
+						"updateMatrices"
+					]
+				},
+
+				"DirectionalLightShadow": {
+					"property": [
+						"camera"
+					]
+				},
+
+				"SpotLightShadow": {
+					"property": [
+						"camera",
+						"focus"
+					]
+				}
+			},
+
+			"Loaders": {
+				"AnimationLoader": {
+					"method": [
+						"load",
+						"parse"
+					]
+				},
+
+				"AudioLoader": {
+					"method": [
+						"load"
+					]
+				},
+
+				"BufferGeometryLoader": {
+					"method": [
+						"load",
+						"parse"
+					]
+				},
+
+				"Cache": {
+					"method": [
+						"add",
+						"get",
+						"remove",
+						"clear"
+					],
+					"property": [
+						"enabled",
+						"files"
+					]
+				},
+
+				"CompressedTextureLoader": {
+					"method": [
+						"load"
+					]
+				},
+
+				"CubeTextureLoader": {
+					"method": [
+						"load"
+					]
+				},
+
+				"DataTextureLoader": {
+					"method": [
+						"load"
+					]
+				},
+
+				"FileLoader": {
+					"method": [
+						"load",
+						"setMimeType",
+						"setResponseType"
+					],
+					"property": [
+						"mimeType",
+						"responseType"
+					]
+				},
+
+				"FontLoader": {
+					"method": [
+						"load",
+						"parse"
+					]
+				},
+
+				"ImageBitmapLoader": {
+					"method": [
+						"load",
+						"setOptions"
+					],
+					"property": [
+						"options"
+					]
+				},
+
+				"ImageLoader": {
+					"method": [
+						"load"
+					]
+				},
+
+				"Loader": {
+					"method": [
+						"load",
+						"loadAsync",
+						"parse",
+						"setCrossOrigin",
+						"setWithCredentials",
+						"setPath",
+						"setResourcePath",
+						"setRequestHeader"
+					],
+					"property": [
+						"crossOrigin",
+						"withCredentials",
+						"manager",
+						"path",
+						"resourcePath",
+						"requestHeader"
+					]
+				},
+
+				"LoaderUtils": {
+					"method": [
+						"decodeText",
+						"extractUrlBase"
+					]
+				},
+
+				"MaterialLoader": {
+					"method": [
+						"load",
+						"parse",
+						"setTextures"
+					],
+					"property": [
+						"textures"
+					]
+				},
+
+				"ObjectLoader": {
+					"method": [
+						"load",
+						"parse",
+						"parseGeometries",
+						"parseMaterials",
+						"parseAnimations",
+						"parseImages",
+						"parseTextures",
+						"parseObject"
+					]
+				},
+
+				"TextureLoader": {
+					"method": [
+						"load"
+					]
+				}
+			},
+
+			"Loaders / Managers": {
+				"DefaultLoadingManager": {},
+
+				"LoadingManager": {
+					"method": [
+						"addHandler",
+						"getHandler",
+						"removeHandler",
+						"resolveURL",
+						"setURLModifier",
+						"itemStart",
+						"itemEnd",
+						"itemError"
+					],
+					"property": [
+						"onStart",
+						"onLoad",
+						"onProgress",
+						"onError"
+					]
+				}
+			},
+
+			"Materials": {
+				"LineBasicMaterial": {
+					"property": [
+						"color",
+						"linewidth",
+						"linecap",
+						"linejoin"
+					]
+				},
+
+				"LineDashedMaterial": {
+					"property": [
+						"dashSize",
+						"gapSize",
+						"scale"
+					]
+				},
+
+				"Material": {
+					"method": [
+						"clone",
+						"copy",
+						"dispose",
+						"onBeforeCompile",
+						"customProgramCacheKey",
+						"setValues",
+						"toJSON"
+					],
+					"property": [
+						"alphaTest",
+						"alphaToCoverage",
+						"blendDst",
+						"blendDstAlpha",
+						"blendEquation",
+						"blendEquationAlpha",
+						"blending",
+						"blendSrc",
+						"blendSrcAlpha",
+						"clipIntersection",
+						"clippingPlanes",
+						"clipShadows",
+						"colorWrite",
+						"defines",
+						"depthFunc",
+						"depthTest",
+						"depthWrite",
+						"format",
+						"stencilWrite",
+						"stencilWriteMask",
+						"stencilFunc",
+						"stencilRef",
+						"stencilFuncMask",
+						"stencilFail",
+						"stencilZFail",
+						"stencilZPass",
+						"fog",
+						"id",
+						"name",
+						"needsUpdate",
+						"opacity",
+						"polygonOffset",
+						"polygonOffsetFactor",
+						"polygonOffsetUnits",
+						"precision",
+						"premultipliedAlpha",
+						"dithering",
+						"shadowSide",
+						"side",
+						"toneMapped",
+						"transparent",
+						"type",
+						"uuid",
+						"version",
+						"needsUpdate",
+						"vertexColors",
+						"visible",
+						"userData"
+					]
+				},
+
+				"MeshBasicMaterial": {
+					"property": [
+						"alphaMap",
+						"aoMap",
+						"aoMapIntensity",
+						"color",
+						"combine",
+						"envMap",
+						"lightMap",
+						"lightMapIntensity",
+						"map",
+						"reflectivity",
+						"refractionRatio",
+						"specularMap",
+						"wireframe",
+						"wireframeLinecap",
+						"wireframeLinejoin",
+						"wireframeLinewidth"
+					]
+				},
+
+				"MeshDepthMaterial": {
+					"property": [
+						"alphaMap",
+						"depthPacking",
+						"displacementMap",
+						"displacementScale",
+						"displacementBias",
+						"fog",
+						"map",
+						"wireframe",
+						"wireframeLinewidth"
+					]
+				},
+
+				"MeshDistanceMaterial": {
+					"property": [
+						"alphaMap",
+						"displacementMap",
+						"displacementScale",
+						"displacementBias",
+						"farDistance",
+						"fog",
+						"map",
+						"nearDistance",
+						"referencePosition"
+					]
+				},
+
+				"MeshLambertMaterial": {
+					"property": [
+						"alphaMap",
+						"aoMap",
+						"aoMapIntensity",
+						"color",
+						"combine",
+						"emissive",
+						"emissiveMap",
+						"emissiveIntensity",
+						"envMap",
+						"lightMap",
+						"lightMapIntensity",
+						"map",
+						"reflectivity",
+						"refractionRatio",
+						"specularMap",
+						"wireframe",
+						"wireframeLinecap",
+						"wireframeLinejoin",
+						"wireframeLinewidth"
+					]
+				},
+
+				"MeshMatcapMaterial": {
+					"property": [
+						"alphaMap",
+						"bumpMap",
+						"bumpScale",
+						"color",
+						"displacementMap",
+						"displacementScale",
+						"displacementBias",
+						"flatShading",
+						"map",
+						"matcap",
+						"normalMap",
+						"normalMapType",
+						"normalScale"
+					]
+				},
+
+				"MeshNormalMaterial": {
+					"property": [
+						"bumpMap",
+						"bumpScale",
+						"displacementMap",
+						"displacementScale",
+						"displacementBias",
+						"flatShading",
+						"fog",
+						"normalMap",
+						"normalMapType",
+						"normalScale",
+						"wireframe",
+						"wireframeLinewidth"
+					]
+				},
+
+				"MeshPhongMaterial": {
+					"property": [
+						"alphaMap",
+						"aoMap",
+						"aoMapIntensity",
+						"bumpMap",
+						"bumpScale",
+						"color",
+						"combine",
+						"displacementMap",
+						"displacementScale",
+						"displacementBias",
+						"emissive",
+						"emissiveMap",
+						"emissiveIntensity",
+						"envMap",
+						"flatShading",
+						"lightMap",
+						"lightMapIntensity",
+						"map",
+						"normalMap",
+						"normalMapType",
+						"normalScale",
+						"reflectivity",
+						"refractionRatio",
+						"shininess",
+						"specular",
+						"specularMap",
+						"wireframe",
+						"wireframeLinecap",
+						"wireframeLinejoin",
+						"wireframeLinewidth"
+					]
+				},
+
+				"MeshPhysicalMaterial": {
+					"property": [
+						"clearcoat",
+						"clearcoatMap",
+						"clearcoatNormalMap",
+						"clearcoatNormalScale",
+						"clearcoatRoughness",
+						"clearcoatRoughnessMap",
+						"defines",
+						"ior",
+						"reflectivity",
+						"sheen",
+						"sheenRoughness",
+						"sheenTint",
+						"transmission",
+						"transmissionMap"
+					]
+				},
+
+				"MeshStandardMaterial": {
+					"property": [
+						"alphaMap",
+						"aoMap",
+						"aoMapIntensity",
+						"bumpMap",
+						"bumpScale",
+						"color",
+						"defines",
+						"displacementMap",
+						"displacementScale",
+						"displacementBias",
+						"emissive",
+						"emissiveMap",
+						"emissiveIntensity",
+						"envMap",
+						"envMapIntensity",
+						"flatShading",
+						"lightMap",
+						"lightMapIntensity",
+						"map",
+						"metalness",
+						"metalnessMap",
+						"normalMap",
+						"normalMapType",
+						"normalScale",
+						"refractionRatio",
+						"roughness",
+						"roughnessMap",
+						"wireframe",
+						"wireframeLinecap",
+						"wireframeLinejoin",
+						"wireframeLinewidth"
+					]
+				},
+
+				"MeshToonMaterial": {
+					"property": [
+						"alphaMap",
+						"aoMap",
+						"aoMapIntensity",
+						"bumpMap",
+						"bumpScale",
+						"color",
+						"displacementMap",
+						"displacementScale",
+						"displacementBias",
+						"emissive",
+						"emissiveMap",
+						"emissiveIntensity",
+						"gradientMap",
+						"lightMap",
+						"lightMapIntensity",
+						"map",
+						"normalMap",
+						"normalMapType",
+						"normalScale",
+						"wireframe",
+						"wireframeLinecap",
+						"wireframeLinejoin",
+						"wireframeLinewidth"
+					]
+				},
+
+				"PointsMaterial": {
+					"property": [
+						"alphaMap",
+						"color",
+						"map",
+						"size",
+						"sizeAttenuation"
+					]
+				},
+
+				"RawShaderMaterial": {},
+
+				"ShaderMaterial": {
+					"method": [
+						"clone"
+					],
+					"property": [
+						"clipping",
+						"defaultAttributeValues",
+						"defines",
+						"extensions",
+						"fog",
+						"fragmentShader",
+						"glslVersion",
+						"index0AttributeName",
+						"lights",
+						"linewidth",
+						"flatShading",
+						"uniforms",
+						"uniformsNeedUpdate",
+						"vertexColors",
+						"vertexShader",
+						"wireframe",
+						"wireframeLinewidth"
+					]
+				},
+
+				"ShadowMaterial": {
+					"property": [
+						"transparent"
+					]
+				},
+
+				"SpriteMaterial": {
+					"property": [
+						"alphaMap",
+						"color",
+						"map",
+						"rotation",
+						"sizeAttenuation"
+					]
+				}
+			},
+
+			"Math": {
+				"Box2": {
+					"method": [
+						"clampPoint",
+						"clone",
+						"containsBox",
+						"containsPoint",
+						"copy",
+						"distanceToPoint",
+						"equals",
+						"expandByPoint",
+						"expandByScalar",
+						"expandByVector",
+						"getCenter",
+						"getParameter",
+						"getSize",
+						"intersect",
+						"intersectsBox",
+						"isEmpty",
+						"makeEmpty",
+						"set",
+						"setFromCenterAndSize",
+						"setFromPoints",
+						"translate",
+						"union"
+					],
+					"property": [
+						"min",
+						"max"
+					]
+				},
+
+				"Box3": {
+					"method": [
+						"applyMatrix4",
+						"clampPoint",
+						"clone",
+						"containsBox",
+						"containsPoint",
+						"copy",
+						"distanceToPoint",
+						"equals",
+						"expandByObject",
+						"expandByPoint",
+						"expandByScalar",
+						"expandByVector",
+						"getBoundingSphere",
+						"getCenter",
+						"getParameter",
+						"getSize",
+						"intersect",
+						"intersectsBox",
+						"intersectsPlane",
+						"intersectsSphere",
+						"intersectsTriangle",
+						"isEmpty",
+						"makeEmpty",
+						"set",
+						"setFromArray",
+						"setFromBufferAttribute",
+						"setFromCenterAndSize",
+						"setFromObject",
+						"setFromPoints",
+						"translate",
+						"union"
+					],
+					"property": [
+						"min",
+						"max"
+					]
+				},
+
+				"Color": {
+					"method": [
+						"add",
+						"addColors",
+						"addScalar",
+						"clone",
+						"copy",
+						"convertGammaToLinear",
+						"convertLinearToGamma",
+						"convertLinearToSRGB",
+						"convertSRGBToLinear",
+						"copyGammaToLinear",
+						"copyLinearToGamma",
+						"copyLinearToSRGB",
+						"copySRGBToLinear",
+						"equals",
+						"fromArray",
+						"fromBufferAttribute",
+						"getHex",
+						"getHexString",
+						"getHSL",
+						"getStyle",
+						"lerp",
+						"lerpColors",
+						"lerpHSL",
+						"multiply",
+						"multiplyScalar",
+						"offsetHSL",
+						"set",
+						"setHex",
+						"setHSL",
+						"setRGB",
+						"setScalar",
+						"setStyle",
+						"setColorName",
+						"sub",
+						"toArray"
+					],
+					"property": [
+						"r",
+						"g",
+						"b"
+					]
+				},
+
+				"Cylindrical": {
+					"method": [
+						"clone",
+						"copy",
+						"set",
+						"setFromVector3",
+						"setFromCartesianCoords"
+					],
+					"property": [
+						"radius",
+						"theta",
+						"y"
+					]
+				},
+
+				"Euler": {
+					"method": [
+						"copy",
+						"clone",
+						"equals",
+						"fromArray",
+						"reorder",
+						"set",
+						"setFromRotationMatrix",
+						"setFromQuaternion",
+						"setFromVector3",
+						"toArray",
+						"toVector3"
+					],
+					"property": [
+						"order",
+						"x",
+						"y",
+						"z"
+					]
+				},
+
+				"Frustum": {
+					"method": [
+						"clone",
+						"containsPoint",
+						"copy",
+						"intersectsBox",
+						"intersectsObject",
+						"intersectsSphere",
+						"intersectsSprite",
+						"set",
+						"setFromProjectionMatrix"
+					],
+					"property": [
+						"planes"
+					]
+				},
+
+				"Interpolant": {
+					"url": [
+						[],
+						[]
+					],
+					"method": [
+						"evaluate"
+					],
+					"property": [
+						"parameterPositions",
+						"resultBuffer",
+						"sampleValues",
+						"settings",
+						"valueSize"
+					]
+				},
+
+				"Line3": {
+					"method": [
+						"applyMatrix4",
+						"at",
+						"clone",
+						"closestPointToPoint",
+						"closestPointToPointParameter",
+						"copy",
+						"delta",
+						"distance",
+						"distanceSq",
+						"equals",
+						"getCenter",
+						"set"
+					],
+					"property": [
+						"start",
+						"end"
+					]
+				},
+
+				"MathUtils": {
+					"method": [
+						"clamp",
+						"degToRad",
+						"euclideanModulo",
+						"generateUUID",
+						"isPowerOfTwo",
+						"inverseLerp",
+						"lerp",
+						"damp",
+						"mapLinear",
+						"pingpong",
+						"ceilPowerOfTwo",
+						"floorPowerOfTwo",
+						"radToDeg",
+						"randFloat",
+						"randFloatSpread",
+						"randInt",
+						"seededRandom",
+						"smoothstep",
+						"smootherstep",
+						"setQuaternionFromProperEuler"
+					]
+				},
+
+				"Matrix3": {
+					"method": [
+						"clone",
+						"copy",
+						"determinant",
+						"equals",
+						"extractBasis",
+						"fromArray",
+						"invert",
+						"getNormalMatrix",
+						"identity",
+						"multiply",
+						"multiplyMatrices",
+						"multiplyScalar",
+						"set",
+						"premultiply",
+						"setFromMatrix4",
+						"setUvTransform",
+						"toArray",
+						"transpose",
+						"transposeIntoArray"
+					],
+					"property": [
+						"elements"
+					]
+				},
+
+				"Matrix4": {
+					"method": [
+						"clone",
+						"compose",
+						"copy",
+						"copyPosition",
+						"decompose",
+						"determinant",
+						"equals",
+						"extractBasis",
+						"extractRotation",
+						"fromArray",
+						"invert",
+						"getMaxScaleOnAxis",
+						"identity",
+						"lookAt",
+						"makeRotationAxis",
+						"makeBasis",
+						"makePerspective",
+						"makeOrthographic",
+						"makeRotationFromEuler",
+						"makeRotationFromQuaternion",
+						"makeRotationX",
+						"makeRotationY",
+						"makeRotationZ",
+						"makeScale",
+						"makeShear",
+						"makeTranslation",
+						"multiply",
+						"multiplyMatrices",
+						"multiplyScalar",
+						"premultiply",
+						"scale",
+						"set",
+						"setFromMatrix3",
+						"setPosition",
+						"setPosition",
+						"toArray",
+						"transpose"
+					],
+					"property": [
+						"elements"
+					]
+				},
+
+				"Plane": {
+					"method": [
+						"applyMatrix4",
+						"clone",
+						"coplanarPoint",
+						"copy",
+						"distanceToPoint",
+						"distanceToSphere",
+						"equals",
+						"intersectLine",
+						"intersectsBox",
+						"intersectsLine",
+						"intersectsSphere",
+						"negate",
+						"normalize",
+						"projectPoint",
+						"set",
+						"setComponents",
+						"setFromCoplanarPoints",
+						"setFromNormalAndCoplanarPoint",
+						"translate"
+					],
+					"property": [
+						"normal",
+						"constant"
+					]
+				},
+
+				"Quaternion": {
+					"method": [
+						"angleTo",
+						"clone",
+						"conjugate",
+						"copy",
+						"equals",
+						"dot",
+						"fromArray",
+						"identity",
+						"invert",
+						"length",
+						"lengthSq",
+						"normalize",
+						"multiply",
+						"multiplyQuaternions",
+						"premultiply",
+						"random",
+						"rotateTowards",
+						"slerp",
+						"slerpQuaternions",
+						"set",
+						"setFromAxisAngle",
+						"setFromEuler",
+						"setFromRotationMatrix",
+						"setFromUnitVectors",
+						"toArray",
+						"fromBufferAttribute",
+						"slerpFlat"
+					],
+					"property": [
+						"x",
+						"y",
+						"z",
+						"w"
+					]
+				},
+
+				"Ray": {
+					"method": [
+						"applyMatrix4",
+						"at",
+						"clone",
+						"closestPointToPoint",
+						"copy",
+						"distanceSqToPoint",
+						"distanceSqToSegment",
+						"distanceToPlane",
+						"distanceToPoint",
+						"equals",
+						"intersectBox",
+						"intersectPlane",
+						"intersectSphere",
+						"intersectTriangle",
+						"intersectsBox",
+						"intersectsPlane",
+						"intersectsSphere",
+						"lookAt",
+						"recast",
+						"set"
+					],
+					"property": [
+						"origin",
+						"direction"
+					]
+				},
+
+				"Sphere": {
+					"method": [
+						"applyMatrix4",
+						"clampPoint",
+						"clone",
+						"containsPoint",
+						"copy",
+						"distanceToPoint",
+						"expandByPoint",
+						"isEmpty",
+						"makeEmpty",
+						"equals",
+						"getBoundingBox",
+						"intersectsBox",
+						"intersectsPlane",
+						"intersectsSphere",
+						"set",
+						"setFromPoints",
+						"translate",
+						"union"
+					],
+					"property": [
+						"center",
+						"radius"
+					]
+				},
+
+				"Spherical": {
+					"method": [
+						"clone",
+						"copy",
+						"makeSafe",
+						"set",
+						"setFromVector3",
+						"setFromCartesianCoords"
+					],
+					"property": [
+						"radius",
+						"phi",
+						"theta"
+					]
+				},
+
+				"SphericalHarmonics3": {
+					"method": [
+						"add",
+						"addScaledSH",
+						"clone",
+						"copy",
+						"equals",
+						"fromArray",
+						"getAt",
+						"getIrradianceAt",
+						"lerp",
+						"scale",
+						"set",
+						"toArray",
+						"zero",
+						"getBasisAt"
+					],
+					"property": [
+						"coefficients"
+					]
+				},
+
+				"Triangle": {
+					"method": [
+						"clone",
+						"closestPointToPoint",
+						"containsPoint",
+						"copy",
+						"equals",
+						"getArea",
+						"getBarycoord",
+						"getMidpoint",
+						"getNormal",
+						"getPlane",
+						"intersectsBox",
+						"set",
+						"setFromAttributeAndIndices",
+						"setFromPointsAndIndices"
+					],
+					"property": [
+						"a",
+						"b",
+						"c"
+					]
+				},
+
+				"Vector2": {
+					"method": [
+						"add",
+						"addScalar",
+						"addScaledVector",
+						"addVectors",
+						"angle",
+						"applyMatrix3",
+						"ceil",
+						"clamp",
+						"clampLength",
+						"clampScalar",
+						"clone",
+						"copy",
+						"distanceTo",
+						"manhattanDistanceTo",
+						"distanceToSquared",
+						"divide",
+						"divideScalar",
+						"dot",
+						"cross",
+						"equals",
+						"floor",
+						"fromArray",
+						"fromBufferAttribute",
+						"getComponent",
+						"length",
+						"manhattanLength",
+						"lengthSq",
+						"lerp",
+						"lerpVectors",
+						"negate",
+						"normalize",
+						"max",
+						"min",
+						"multiply",
+						"multiplyScalar",
+						"rotateAround",
+						"round",
+						"roundToZero",
+						"set",
+						"setComponent",
+						"setLength",
+						"setScalar",
+						"setX",
+						"setY",
+						"sub",
+						"subScalar",
+						"subVectors",
+						"toArray",
+						"random"
+					],
+					"property": [
+						"height",
+						"width",
+						"x",
+						"y"
+					]
+				},
+
+				"Vector3": {
+					"method": [
+						"add",
+						"addScalar",
+						"addScaledVector",
+						"addVectors",
+						"applyAxisAngle",
+						"applyEuler",
+						"applyMatrix3",
+						"applyMatrix4",
+						"applyNormalMatrix",
+						"applyQuaternion",
+						"angleTo",
+						"ceil",
+						"clamp",
+						"clampLength",
+						"clampScalar",
+						"clone",
+						"copy",
+						"cross",
+						"crossVectors",
+						"distanceTo",
+						"manhattanDistanceTo",
+						"distanceToSquared",
+						"divide",
+						"divideScalar",
+						"dot",
+						"equals",
+						"floor",
+						"fromArray",
+						"fromBufferAttribute",
+						"getComponent",
+						"length",
+						"manhattanLength",
+						"lengthSq",
+						"lerp",
+						"lerpVectors",
+						"max",
+						"min",
+						"multiply",
+						"multiplyScalar",
+						"multiplyVectors",
+						"negate",
+						"normalize",
+						"project",
+						"projectOnPlane",
+						"projectOnVector",
+						"reflect",
+						"round",
+						"roundToZero",
+						"set",
+						"setComponent",
+						"setFromCylindrical",
+						"setFromCylindricalCoords",
+						"setFromMatrixColumn",
+						"setFromMatrix3Column",
+						"setFromMatrixPosition",
+						"setFromMatrixScale",
+						"setFromSpherical",
+						"setFromSphericalCoords",
+						"setLength",
+						"setScalar",
+						"setX",
+						"setY",
+						"setZ",
+						"sub",
+						"subScalar",
+						"subVectors",
+						"toArray",
+						"transformDirection",
+						"unproject",
+						"random",
+						"randomDirection"
+					],
+					"property": [
+						"x",
+						"y",
+						"z"
+					]
+				},
+
+				"Vector4": {
+					"method": [
+						"add",
+						"addScalar",
+						"addScaledVector",
+						"addVectors",
+						"applyMatrix4",
+						"ceil",
+						"clamp",
+						"clampLength",
+						"clampScalar",
+						"clone",
+						"copy",
+						"divideScalar",
+						"dot",
+						"equals",
+						"floor",
+						"fromArray",
+						"fromBufferAttribute",
+						"getComponent",
+						"length",
+						"manhattanLength",
+						"lengthSq",
+						"lerp",
+						"lerpVectors",
+						"negate",
+						"normalize",
+						"max",
+						"min",
+						"multiply",
+						"multiplyScalar",
+						"round",
+						"roundToZero",
+						"set",
+						"setAxisAngleFromQuaternion",
+						"setAxisAngleFromRotationMatrix",
+						"setComponent",
+						"setLength",
+						"setScalar",
+						"setX",
+						"setY",
+						"setZ",
+						"setW",
+						"sub",
+						"subScalar",
+						"subVectors",
+						"toArray",
+						"random"
+					],
+					"property": [
+						"x",
+						"y",
+						"z",
+						"w",
+						"width",
+						"height"
+					]
+				}
+			},
+
+			"Math / Interpolants": {
+				"CubicInterpolant": {
+					"url": [
+						[],
+						[],
+						0,
+						[]
+					],
+					"method": [
+						"evaluate"
+					],
+					"property": [
+						"parameterPositions",
+						"resultBuffer",
+						"sampleValues",
+						"settings",
+						"valueSize"
+					]
+				},
+
+				"DiscreteInterpolant": {
+					"url": [
+						[],
+						[],
+						0,
+						[]
+					],
+					"method": [
+						"evaluate"
+					],
+					"property": [
+						"parameterPositions",
+						"resultBuffer",
+						"sampleValues",
+						"settings",
+						"valueSize"
+					]
+				},
+
+				"LinearInterpolant": {
+					"url": [
+						[],
+						[],
+						0,
+						[]
+					],
+					"method": [
+						"evaluate"
+					],
+					"property": [
+						"parameterPositions",
+						"resultBuffer",
+						"sampleValues",
+						"settings",
+						"valueSize"
+					]
+				},
+
+				"QuaternionLinearInterpolant": {
+					"url": [
+						[],
+						[],
+						0,
+						[]
+					],
+					"method": [
+						"evaluate"
+					],
+					"property": [
+						"parameterPositions",
+						"resultBuffer",
+						"sampleValues",
+						"settings",
+						"valueSize"
+					]
+				}
+			},
+
+			"Objects": {
+				"Bone": {
+					"property": [
+						"type"
+					]
+				},
+
+				"Group": {
+					"property": [
+						"type"
+					]
+				},
+
+				"InstancedMesh": {
+					"method": [
+						"dispose",
+						"getColorAt",
+						"getMatrixAt",
+						"setColorAt",
+						"setMatrixAt"
+					],
+					"property": [
+						"count",
+						"instanceColor",
+						"instanceMatrix"
+					]
+				},
+
+				"Line": {
+					"method": [
+						"computeLineDistances",
+						"raycast",
+						"clone",
+						"updateMorphTargets"
+					],
+					"property": [
+						"geometry",
+						"material",
+						"morphTargetInfluences",
+						"morphTargetDictionary"
+					]
+				},
+
+				"LineLoop": {},
+
+				"LineSegments": {},
+
+				"LOD": {
+					"method": [
+						"addLevel",
+						"clone",
+						"getCurrentLevel",
+						"getObjectForDistance",
+						"raycast",
+						"toJSON",
+						"update"
+					],
+					"property": [
+						"autoUpdate",
+						"levels"
+					]
+				},
+
+				"Mesh": {
+					"method": [
+						"clone",
+						"raycast",
+						"updateMorphTargets"
+					],
+					"property": [
+						"geometry",
+						"material",
+						"morphTargetInfluences",
+						"morphTargetDictionary"
+					]
+				},
+
+				"Points": {
+					"method": [
+						"raycast",
+						"clone",
+						"updateMorphTargets"
+					],
+					"property": [
+						"geometry",
+						"material",
+						"morphTargetInfluences",
+						"morphTargetDictionary"
+					]
+				},
+
+				"Skeleton": {
+					"method": [
+						"clone",
+						"calculateInverses",
+						"computeBoneTexture",
+						"pose",
+						"update",
+						"getBoneByName",
+						"dispose"
+					],
+					"property": [
+						"bones",
+						"boneInverses",
+						"boneMatrices",
+						"boneTexture",
+						"boneTextureSize"
+					]
+				},
+
+				"SkinnedMesh": {
+					"method": [
+						"bind",
+						"clone",
+						"normalizeSkinWeights",
+						"pose",
+						"updateMatrixWorld",
+						"boneTransform"
+					],
+					"property": [
+						"bindMode",
+						"bindMatrix",
+						"bindMatrixInverse",
+						"skeleton"
+					]
+				},
+
+				"Sprite": {
+					"method": [
+						"clone",
+						"copy",
+						"raycast"
+					],
+					"property": [
+						"material",
+						"center"
+					]
+				}
+			},
+
+			"Renderers": {
+				"WebGLMultipleRenderTargets": {
+					"property": [
+						"texture"
+					]
+				},
+
+				"WebGLMultisampleRenderTarget": {
+					"property": [
+						"samples"
+					]
+				},
+
+				"WebGLRenderer": {
+					"method": [
+						"clear",
+						"clearColor",
+						"clearDepth",
+						"clearStencil",
+						"compile",
+						"copyFramebufferToTexture",
+						"copyTextureToTexture",
+						"copyTextureToTexture3D",
+						"dispose",
+						"extensions.get",
+						"forceContextLoss",
+						"forceContextRestore",
+						"getClearAlpha",
+						"getClearColor",
+						"getContext",
+						"getContextAttributes",
+						"getActiveCubeFace",
+						"getActiveMipmapLevel",
+						"getRenderTarget",
+						"getCurrentViewport",
+						"getDrawingBufferSize",
+						"getPixelRatio",
+						"getScissor",
+						"getScissorTest",
+						"getSize",
+						"getViewport",
+						"initTexture",
+						"resetGLState",
+						"readRenderTargetPixels",
+						"render",
+						"renderBufferDirect",
+						"renderBufferImmediate",
+						"resetState",
+						"setAnimationLoop",
+						"setClearAlpha",
+						"setClearColor",
+						"setPixelRatio",
+						"setRenderTarget",
+						"setScissor",
+						"setScissor",
+						"setScissorTest",
+						"setOpaqueSort",
+						"setTransparentSort",
+						"setSize",
+						"setViewport",
+						"setViewport"
+					],
+					"property": [
+						"autoClear",
+						"autoClearColor",
+						"autoClearDepth",
+						"autoClearStencil",
+						"debug.checkShaderErrors",
+						"capabilities",
+						"maxVertexTextures",
+						"clippingPlanes",
+						"domElement",
+						"extensions",
+						"gammaFactor",
+						"outputEncoding",
+						"info",
+						"localClippingEnabled",
+						"physicallyCorrectLights",
+						"properties",
+						"renderLists",
+						"shadowMap",
+						"shadowMap.enabled",
+						"shadowMap.autoUpdate",
+						"shadowMap.needsUpdate",
+						"shadowMap.type",
+						"sortObjects",
+						"state",
+						"toneMapping",
+						"toneMappingExposure",
+						"xr"
+					]
+				},
+
+				"WebGL1Renderer": {},
+
+				"WebGLRenderTarget": {
+					"method": [
+						"setSize",
+						"clone",
+						"copy",
+						"dispose"
+					],
+					"property": [
+						"width",
+						"height",
+						"scissor",
+						"scissorTest",
+						"viewport",
+						"texture",
+						"depthBuffer",
+						"stencilBuffer",
+						"depthTexture"
+					]
+				},
+
+				"WebGLCubeRenderTarget": {
+					"method": [
+						"fromEquirectangularTexture",
+						"clear"
+					]
+				}
+			},
+
+			"Renderers / Shaders": {
+				"ShaderChunk": {},
+
+				"ShaderLib": {},
+
+				"UniformsLib": {},
+
+				"UniformsUtils": {
+					"method": [
+						"clone",
+						"merge"
+					]
+				}
+			},
+
+			"Renderers / WebXR": {
+				"WebXRManager": {
+					"method": [
+						"getCamera",
+						"getController",
+						"getControllerGrip",
+						"getHand",
+						"getReferenceSpace",
+						"getSession",
+						"setFramebufferScaleFactor",
+						"setReferenceSpaceType",
+						"updateCamera"
+					],
+					"property": [
+						"cameraAutoUpdate",
+						"enabled",
+						"isPresenting"
+					]
+				}
+			},
+
+			"Scenes": {
+				"Fog": {
+					"method": [
+						"clone",
+						"toJSON"
+					],
+					"property": [
+						"name",
+						"color",
+						"near",
+						"far"
+					]
+				},
+
+				"FogExp2": {
+					"method": [
+						"clone",
+						"toJSON"
+					],
+					"property": [
+						"name",
+						"color",
+						"density"
+					]
+				},
+
+				"Scene": {
+					"method": [
+						"toJSON"
+					],
+					"property": [
+						"autoUpdate",
+						"background",
+						"environment",
+						"fog",
+						"overrideMaterial"
+					]
+				}
+			},
+
+			"Textures": {
+				"CanvasTexture": {
+					"property": [
+						"needsUpdate"
+					]
+				},
+
+				"CompressedTexture": {
+					"property": [
+						"flipY",
+						"generateMipmaps"
+					]
+				},
+
+				"CubeTexture": {},
+
+				"DataTexture": {
+					"property": [
+						"image"
+					]
+				},
+
+				"DataTexture2DArray": {
+					"property": [
+						"image"
+					]
+				},
+
+				"DataTexture3D": {
+					"property": [
+						"wrapR"
+					]
+				},
+
+				"DepthTexture": {},
+
+				"Texture": {
+					"method": [
+						"updateMatrix",
+						"clone",
+						"toJSON",
+						"dispose",
+						"transformUv"
+					],
+					"property": [
+						"id",
+						"uuid",
+						"name",
+						"image",
+						"mipmaps",
+						"mapping",
+						"wrapS",
+						"wrapT",
+						"wrapS",
+						"magFilter",
+						"minFilter",
+						"anisotropy",
+						"format",
+						"internalFormat",
+						"type",
+						"offset",
+						"repeat",
+						"rotation",
+						"center",
+						"matrixAutoUpdate",
+						"matrix",
+						"generateMipmaps",
+						"premultiplyAlpha",
+						"flipY",
+						"unpackAlignment",
+						"encoding",
+						"version",
+						"needsUpdate",
+						"onUpdate",
+						"needsUpdate"
+					]
+				},
+
+				"VideoTexture": {
+					"url": [
+						{}
+					],
+					"method": [
+						"update"
+					],
+					"property": [
+						"needsUpdate",
+						"needsUpdate"
+					]
+				}
+			}
+		},
+
+		"Examples": {
+			"_main": "examples/en",
+			"Animations": {
+				"CCDIKSolver": {
+					"method": [
+						"createHelper",
+						"update",
+						"updateOne"
+					],
+					"property": [
+						"iks",
+						"mesh"
+					]
+				},
+
+				"MMDAnimationHelper": {
+					"method": [
+						"add",
+						"enable",
+						"pose",
+						"remove",
+						"update"
+					],
+					"property": [
+						"audio",
+						"camera",
+						"meshes",
+						"objects",
+						"onBeforePhysics"
+					]
+				},
+
+				"MMDPhysics": {
+					"method": [
+						"createHelper",
+						"reset",
+						"setGravity",
+						"update",
+						"warmup"
+					],
+					"property": [
+						"mesh"
+					]
+				}
+			},
+
+			"Controls": {
+				"ArcballControls": {},
+
+				"DeviceOrientationControls": {
+					"method": [
+						"connect",
+						"disconnect",
+						"dispose",
+						"update"
+					],
+					"property": [
+						"alphaOffset",
+						"deviceOrientation",
+						"enabled",
+						"object",
+						"screenOrientation"
+					]
+				},
+
+				"DragControls": {
+					"method": [
+						"activate",
+						"deactivate",
+						"dispose",
+						"getObjects"
+					],
+					"property": [
+						"enabled",
+						"transformGroup"
+					]
+				},
+
+				"FirstPersonControls": {
+					"method": [
+						"dispose",
+						"handleResize",
+						"lookAt",
+						"lookAt",
+						"update"
+					],
+					"property": [
+						"activeLook",
+						"autoForward",
+						"constrainVertical",
+						"domElement",
+						"enabled",
+						"heightCoef",
+						"heightMax",
+						"heightMin",
+						"heightSpeed",
+						"lookVertical",
+						"lookSpeed",
+						"mouseDragOn",
+						"movementSpeed",
+						"object",
+						"verticalMax",
+						"verticalMin"
+					]
+				},
+
+				"FlyControls": {
+					"method": [
+						"dispose",
+						"update"
+					],
+					"property": [
+						"autoForward",
+						"domElement",
+						"dragToLook",
+						"movementSpeed",
+						"object",
+						"rollSpeed"
+					]
+				},
+
+				"OrbitControls": {
+					"method": [
+						"dispose",
+						"getAzimuthalAngle",
+						"getPolarAngle",
+						"getDistance",
+						"listenToKeyEvents",
+						"reset",
+						"saveState",
+						"update"
+					],
+					"property": [
+						"autoRotate",
+						"autoRotateSpeed",
+						"dampingFactor",
+						"domElement",
+						"enabled",
+						"enableDamping",
+						"enablePan",
+						"enableRotate",
+						"enableZoom",
+						"keyPanSpeed",
+						"keys",
+						"maxAzimuthAngle",
+						"maxDistance",
+						"maxPolarAngle",
+						"maxZoom",
+						"minAzimuthAngle",
+						"minDistance",
+						"minPolarAngle",
+						"minZoom",
+						"mouseButtons",
+						"object",
+						"panSpeed",
+						"position0",
+						"rotateSpeed",
+						"screenSpacePanning",
+						"target0",
+						"target",
+						"touches",
+						"zoom0",
+						"zoomSpeed"
+					]
+				},
+
+				"PointerLockControls": {
+					"method": [
+						"connect",
+						"disconnect",
+						"getDirection",
+						"lock",
+						"moveForward",
+						"moveRight",
+						"unlock"
+					],
+					"property": [
+						"domElement",
+						"isLocked",
+						"maxPolarAngle",
+						"minPolarAngle"
+					]
+				},
+
+				"TrackballControls": {
+					"method": [
+						"checkDistances",
+						"dispose",
+						"handleResize",
+						"panCamera",
+						"reset",
+						"rotateCamera",
+						"update",
+						"zoomCamera"
+					],
+					"property": [
+						"domElement",
+						"dynamicDampingFactor",
+						"enabled",
+						"keys",
+						"maxDistance",
+						"minDistance",
+						"mouseButtons",
+						"noPan",
+						"noRotate",
+						"noZoom",
+						"object",
+						"panSpeed",
+						"rotateSpeed",
+						"screen",
+						"staticMoving",
+						"zoomSpeed"
+					]
+				},
+
+				"TransformControls": {
+					"method": [
+						"attach",
+						"detach",
+						"dispose",
+						"getRaycaster",
+						"getMode",
+						"setMode",
+						"setRotationSnap",
+						"setSize",
+						"setSpace",
+						"setTranslationSnap"
+					],
+					"property": [
+						"axis",
+						"camera",
+						"domElement",
+						"dragging",
+						"enabled",
+						"mode",
+						"object",
+						"rotationSnap",
+						"showX",
+						"showY",
+						"showZ",
+						"size",
+						"space",
+						"translationSnap"
+					]
+				}
+			},
+
+			"Geometries": [
+				"ConvexGeometry",
+				"DecalGeometry"
+			],
+			"Helpers": {
+				"LightProbeHelper": {
+					"method": [
+						"dispose"
+					],
+					"property": [
+						"lightProbe",
+						"size"
+					]
+				},
+
+				"PositionalAudioHelper": {
+					"method": [
+						"dispose",
+						"update"
+					],
+					"property": [
+						"audio",
+						"range",
+						"divisionsInnerAngle",
+						"divisionsOuterAngle"
+					]
+				},
+
+				"RectAreaLightHelper": {
+					"method": [
+						"dispose"
+					],
+					"property": [
+						"light",
+						"color"
+					]
+				},
+
+				"VertexNormalsHelper": {
+					"method": [
+						"update"
+					],
+					"property": [
+						"matrixAutoUpdate",
+						"object",
+						"size"
+					]
+				},
+
+				"VertexTangentsHelper": {
+					"method": [
+						"update"
+					],
+					"property": [
+						"matrixAutoUpdate",
+						"object",
+						"size"
+					]
+				}
+			},
+
+			"Lights": {
+				"LightProbeGenerator": {
+					"method": [
+						"fromCubeTexture",
+						"fromCubeRenderTarget"
+					]
+				}
+			},
+
+			"Loaders": {
+				"3DMLoader": {
+					"method": [
+						"load",
+						"parse",
+						"setLibraryPath",
+						"setWorkerLimit",
+						"dispose"
+					]
+				},
+
+				"BasisTextureLoader": {
+					"method": [
+						"load",
+						"detectSupport",
+						"setTranscoderPath",
+						"setWorkerLimit",
+						"dispose"
+					]
+				},
+
+				"DRACOLoader": {
+					"method": [
+						"load",
+						"setDecoderPath",
+						"setDecoderConfig",
+						"setWorkerLimit",
+						"preload",
+						"dispose"
+					]
+				},
+
+				"GLTFLoader": {
+					"method": [
+						"load",
+						"setDRACOLoader",
+						"setKTX2Loader",
+						"parse"
+					]
+				},
+
+				"KTX2Loader": {
+					"method": [
+						"load",
+						"detectSupport",
+						"setTranscoderPath",
+						"setWorkerLimit",
+						"dispose"
+					]
+				},
+
+				"MMDLoader": {
+					"method": [
+						"load",
+						"loadAnimation",
+						"loadWithAnimation",
+						"setAnimationPath"
+					]
+				},
+
+				"MTLLoader": {
+					"method": [
+						"load",
+						"setMaterialOptions",
+						"parse"
+					]
+				},
+
+				"OBJLoader": {
+					"method": [
+						"load",
+						"parse",
+						"setMaterials"
+					]
+				},
+
+				"PCDLoader": {
+					"method": [
+						"load",
+						"parse"
+					]
+				},
+
+				"PDBLoader": {
+					"method": [
+						"load",
+						"parse"
+					]
+				},
+
+				"PRWMLoader": {
+					"method": [
+						"load",
+						"parse"
+					]
+				},
+
+				"SVGLoader": {
+					"method": [
+						"load",
+						"createShapes"
+					]
+				},
+
+				"TGALoader": {
+					"method": [
+						"load"
+					]
+				}
+			},
+
+			"Objects": [
+				"Lensflare"
+			],
+			"Post-Processing": {
+				"_sub": "postprocessing",
+				"EffectComposer": {
+					"method": [
+						"addPass",
+						"insertPass",
+						"isLastEnabledPass",
+						"removePass",
+						"render",
+						"reset",
+						"setPixelRatio",
+						"setSize",
+						"swapBuffers"
+					],
+					"property": [
+						"passes",
+						"readBuffer",
+						"renderer",
+						"renderToScreen",
+						"writeBuffer"
+					]
+				}
+			},
+
+			"Exporters": {
+				"GLTFExporter": {
+					"method": [
+						"parse"
+					]
+				},
+
+				"PLYExporter": {
+					"method": [
+						"parse"
+					]
+				},
+
+				"ColladaExporter": {
+					"method": [
+						"parse"
+					]
+				}
+			},
+
+			"Math": {
+				"LookupTable": {
+					"url": "Lut",
+					"method": [
+						"copy",
+						"addColorMap",
+						"createCanvas",
+						"getColor",
+						"setColorMap",
+						"setMin",
+						"setMax",
+						"updateCanvas"
+					],
+					"property": [
+						"lut",
+						"map",
+						"minV",
+						"maxV",
+						"n"
+					]
+				},
+
+				"MeshSurfaceSampler": {
+					"method": [
+						"setWeightAttribute",
+						"build",
+						"sample"
+					]
+				},
+
+				"OBB": {
+					"method": [
+						"applyMatrix4",
+						"clampPoint",
+						"clone",
+						"containsPoint",
+						"copy",
+						"equals",
+						"fromBox3",
+						"getSize",
+						"intersectsBox3",
+						"intersectsSphere",
+						"intersectsOBB",
+						"intersectsRay",
+						"intersectRay",
+						"set"
+					],
+					"property": [
+						"center",
+						"halfSize",
+						"rotation"
+					]
+				}
+			},
+
+			"ConvexHull": {
+				"_sub": "math/convexhull",
+				"Face": {
+					"method": [
+						"create",
+						"getEdge",
+						"compute",
+						"distanceToPoint"
+					],
+					"property": [
+						"normal",
+						"midpoint",
+						"area",
+						"constant",
+						"outside",
+						"mark",
+						"edge"
+					]
+				},
+
+				"HalfEdge": {
+					"method": [
+						"head",
+						"tail",
+						"length",
+						"lengthSquared",
+						"setTwin"
+					],
+					"property": [
+						"vertex",
+						"prev",
+						"next",
+						"twin",
+						"face"
+					]
+				},
+
+				"ConvexHull": {
+					"method": [
+						"addAdjoiningFace",
+						"addNewFaces",
+						"addVertexToFace",
+						"addVertexToHull",
+						"cleanup",
+						"compute",
+						"computeExtremes",
+						"computeHorizon",
+						"computeInitialHull",
+						"containsPoint",
+						"deleteFaceVertices",
+						"intersectRay",
+						"intersectsRay",
+						"makeEmpty",
+						"nextVertexToAdd",
+						"reindexFaces",
+						"removeAllVerticesFromFace",
+						"removeVertexFromFace",
+						"resolveUnassignedPoints",
+						"setFromObject",
+						"setFromPoints"
+					],
+					"property": [
+						"assigned",
+						"faces",
+						"newFaces",
+						"tolerance",
+						"unassigned",
+						"vertices"
+					]
+				},
+
+				"VertexNode": {
+					"property": [
+						"point",
+						"prev",
+						"next",
+						"face"
+					]
+				},
+
+				"VertexList": {
+					"method": [
+						"first",
+						"last",
+						"clear",
+						"insertBefore",
+						"insertAfter",
+						"append",
+						"appendChain",
+						"remove",
+						"removeSubList",
+						"isEmpty"
+					],
+					"property": [
+						"head",
+						"tail"
+					]
+				}
+			},
+
+			"Renderers": {
+				"CSS2DRenderer": {
+					"method": [
+						"getSize",
+						"render",
+						"setSize"
+					]
+				},
+
+				"CSS3DRenderer": {
+					"method": [
+						"getSize",
+						"render",
+						"setSize"
+					]
+				},
+
+				"SVGRenderer": {
+					"method": [
+						"clear",
+						"getSize",
+						"render",
+						"setClearColor",
+						"setPrecision",
+						"setQuality",
+						"setSize"
+					],
+					"property": [
+						"overdraw"
+					]
+				}
+			},
+
+			"Utils": {
+				"BufferGeometryUtils": {
+					"method": [
+						"mergeBufferGeometries",
+						"mergeBufferAttributes",
+						"interleaveAttributes",
+						"estimateBytesUsed",
+						"mergeVertices",
+						"toTrianglesDrawMode",
+						"computeMorphedAttributes"
+					]
+				},
+
+				"CameraUtils": {
+					"method": [
+						"frameCorners"
+					]
+				},
+
+				"SceneUtils": {
+					"method": [
+						"createMeshesFromInstancedMesh",
+						"createMultiMaterialObject"
+					]
+				},
+
+				"SkeletonUtils": {
+					"method": [
+						"clone",
+						"findBoneTrackData",
+						"getBoneByName",
+						"getBones",
+						"getEqualsBonesNames",
+						"getHelperFromSkeleton",
+						"getNearestBone",
+						"getSkeletonOffsets",
+						"renameBones",
+						"retarget",
+						"retargetClip"
+					]
+				}
+			}
+		},
+
+		"Developer Reference": {
+			"Polyfills": {
+				"Polyfills": "api/en/Polyfills"
+			},
+
+			"WebGLRenderer": {
+				"_sub": "api/en/renderers/webgl",
+				"WebGLProgram": {
+					"url": "WebGLProgram",
+					"method": [
+						"getUniforms",
+						"getAttributes",
+						"destroy"
+					],
+					"property": [
+						"name",
+						"id",
+						"cacheKey",
+						"usedTimes",
+						"program",
+						"vertexShader",
+						"fragmentShader"
+					]
+				},
+
+				"WebGLShader": {
+					"url": "WebGLShader"
+				},
+
+				"WebGLState": {
+					"url": "WebGLState",
+					"method": [
+						"enable",
+						"disable",
+						"setDepthTest",
+						"setDepthWrite",
+						"setBlending"
+					]
+				}
+			},
+
+			"Misc": {
+				"Legacy": "api/en/misc/Legacy"
+			}
+		}
+	},
+
+	"ar": {
+		"الكتيب": {
+			"_sub": "manual/ar/introduction",
+			"البدء": {
+				"إنشاء مشهد": "Creating-a-scene",
+				"التثبيت": "Installation",
+				"فحص توافق WebGL": "WebGL-compatibility-check",
+				"كيف تدير الأشياء محليًا": "How-to-run-things-locally",
+				"رسم خطوط": "Drawing-lines",
+				"إنشاء نص": "Creating-text",
+				"تحميل نماذج ثلاثية الأبعاد": "Loading-3D-models",
+				"الأسئلة الشائعة": "FAQ",
+				"روابط مفيدة": "Useful-links"
+			},
+
+			"الخطوات التالية": {
+				"كيفية تحديث الأشياء": "How-to-update-things",
+				"كيفية التخلص من الأشياء": "How-to-dispose-of-objects",
+				"كيفية إنشاء محتوى VR": "How-to-create-VR-content",
+				"كيفية استخدام المعالجة اللاحقة (post-processing)": "How-to-use-post-processing",
+				"تحولات المصفوفة (Matrix transformations)": "Matrix-transformations",
+				"نظام الحركات": "Animation-system"
+			},
+
+			"أدوات البناء": {
+				"الاختبار مع NPM": "manual/ar/buildTools/Testing-with-NPM"
+			}
+		},
+
+		"المرجع": {
+			"_main": "api/ar",
+			"الحركات": {
+				"_eng": "Animation",
+				"AnimationAction": 1,
+				"AnimationClip": 1,
+				"AnimationMixer": 1,
+				"AnimationObjectGroup": 1,
+				"AnimationUtils": 1,
+				"KeyframeTrack": 1,
+				"PropertyBinding": 1,
+				"PropertyMixer": 1
+			},
+
+			"الحركات / Tracks": {
+				"_eng": "Animation / Tracks",
+				"BooleanKeyframeTrack": 1,
+				"ColorKeyframeTrack": 1,
+				"NumberKeyframeTrack": 1,
+				"QuaternionKeyframeTrack": 1,
+				"StringKeyframeTrack": 1,
+				"VectorKeyframeTrack": 1
+			},
+
+			"Audio": [
+				"Audio",
+				"AudioAnalyser",
+				"AudioContext",
+				"AudioListener",
+				"PositionalAudio"
+			],
+			"Cameras": [
+				"ArrayCamera",
+				"Camera",
+				"CubeCamera"
+			]
+		}
+	},
+
+	"zh": {
+		"手册": {
+			"_sub": "manual/zh/introduction",
+			"起步": {
+				"创建一个场景": "Creating-a-scene",
+				"安装": "Installation",
+				"WebGL兼容性检查": "WebGL-compatibility-check",
+				"如何在本地运行Three.js": "How-to-run-things-locally",
+				"画线": "Drawing-lines",
+				"创建文字": "Creating-text",
+				"载入3D模型": "Loading-3D-models",
+				"常见问题": "FAQ",
+				"一些有用的链接": "Useful-links"
+			},
+
+			"进阶": {
+				"如何更新场景": "How-to-update-things",
+				"如何废置对象": "How-to-dispose-of-objects",
+				"如何创建VR内容": "How-to-create-VR-content",
+				"如何使用后期处理": "How-to-use-post-processing",
+				"矩阵变换": "Matrix-transformations",
+				"动画系统": "Animation-system"
+			},
+
+			"构建工具": {
+				"使用NPM进行测试": "manual/zh/buildTools/Testing-with-NPM"
+			}
+		},
+
+		"参考": {
+			"_main": "api/zh",
+			"动画": "Animation",
+			"动画 / 轨道": "Animation / Tracks",
+			"音频": "Audio",
+			"摄像机": "Cameras",
+			"常量": "Constants",
+			"核心": "Core",
+			"核心 / BufferAttributes": "Core / BufferAttributes",
+			"附件": "Extras",
+			"附件 / 核心": "Extras / Core",
+			"附件 / 曲线": "Extras / Curves",
+			"附件 / 物体": "Extras / Objects",
+			"几何体": "Geometries",
+			"辅助对象": "Helpers",
+			"灯光": "Lights",
+			"灯光 / 阴影": "Lights / Shadows",
+			"加载器": "Loaders",
+			"加载器 / 管理器": "Loaders / Managers",
+			"材质": "Materials",
+			"数学库": "Math",
+			"数学库 / 插值": "Math / Interpolants",
+			"物体": "Objects",
+			"渲染器": "Renderers",
+			"渲染器 / 着色器": "Renderers / Shaders",
+			"渲染器 / WebXR": "Renderers / WebXR",
+			"场景": "Scenes",
+			"纹理贴图": "Textures"
+		},
+
+		"示例": {
+			"_main": "examples/zh",
+			"动画": "Animations",
+			"控制": "Controls",
+			"几何体": "Geometries",
+			"辅助对象": "Helpers",
+			"灯光": "Lights",
+			"加载器": "Loaders",
+			"物体": "Objects",
+			"后期处理": "Post-Processing",
+			"导出器": "Exporters",
+			"数学库": "Math",
+			"ConvexHull": "ConvexHull",
+			"渲染器": "Renderers",
+			"实用工具": "Utils"
+		},
+
+		"开发者参考": {
+			"差异化支持": {
+				"Polyfills": "api/zh/Polyfills"
+			},
+
+			"WebGL渲染器": {
+				"_sub": "api/zh/renderers/webgl",
+				"WebGLProgram": "WebGLProgram",
+				"WebGLShader": "WebGLShader",
+				"WebGLState": "WebGLState"
+			}
+		}
+	},
+
+	"ko": {
+		"매뉴얼": {
+			"_sub": "manual/ko/introduction",
+			"시작하기": {
+				"장면 만들기": "Creating-a-scene",
+				"설치": "Installation",
+				"WebGL 호환성 검사": "WebGL-compatibility-check",
+				"로컬 환경에서 구동 방법": "How-to-run-things-locally",
+				"선 그리기": "Drawing-lines",
+				"텍스트 만들기": "Creating-text",
+				"3D 모델 불러오기": "Loading-3D-models",
+				"FAQ": "FAQ",
+				"참고 링크": "Useful-links"
+			},
+
+			"심화 과정": {
+				"오브젝트를 업데이트하는 방법": "How-to-update-things",
+				"오브젝트를 폐기하는 방법": "How-to-dispose-of-objects",
+				"VR 컨텐츠를 만드는 방법": "How-to-create-VR-content",
+				"후처리 사용 방법": "How-to-use-post-processing",
+				"행렬 변환": "Matrix-transformations",
+				"애니메이션 시스템": "Animation-system"
+			},
+
+			"빌드 도구": {
+				"NPM 테스트": "manual/ko/buildTools/Testing-with-NPM"
+			}
+		},
+
+		"레퍼런스": {
+			"_main": "api/ko",
+			"애니메이션": "Animation",
+			"애니메이션 / 트랙": "Animation / Tracks",
+			"오디오": "Audio",
+			"카메라": "Cameras",
+			"상수": {
+				"_eng": "Constants",
+				"Animation": 1,
+				"Core": 1,
+				"CustomBlendingEquations": 1,
+				"Materials": 1,
+				"Renderer": 1,
+				"Textures": 1
+			},
+
+			"Core": "Core",
+			"Extra": "Extras"
+		},
+
+		"예제": {
+			"_main": "examples/ko",
+			"컨트롤": {
+				"_eng": "Controls",
+				"DeviceOrientationControls": 1,
+				"DragControls": 1,
+				"FirstPersonControls": 1,
+				"FlyControls": 1,
+				"OrbitControls": 1,
+				"PointerLockControls": 1,
+				"TrackballControls": 1,
+				"TransformControls": 1
+			}
+		}
+	},
+
+	"ja": {
+		"マニュアル": {
+			"_sub": "manual/ja/introduction",
+			"はじめてみましょう": {
+				"シーンの作成": "Creating-a-scene",
+				"インストールの方法": "Installation",
+				"WebGLの互換性の確認": "WebGL-compatibility-check",
+				"localで実行する方法": "How-to-run-things-locally",
+				"線を引く": "Drawing-lines",
+				"テキストを作成する": "Creating-text",
+				"3Dモデルをロードする": "Loading-3D-models",
+				"ライブラリとプラグイン": "Libraries-and-Plugins",
+				"FAQ": "FAQ",
+				"役にたつリンク集": "Useful-links"
+			},
+
+			"次の段階": {
+				"更新の仕方": "How-to-update-things",
+				"オブジェクトを廃棄する方法": "How-to-dispose-of-objects",
+				"VRコンテンツの作り方": "How-to-create-VR-content",
+				"post-processingの使い方": "How-to-use-post-processing",
+				"行列の変換": "Matrix-transformations",
+				"アニメーションシステム": "Animation-system"
+			},
+
+			"ビルドツール": {
+				"NPMでテストを実行する": "manual/ja/buildTools/Testing-with-NPM"
+			}
+		}
+	}
+}
